@@ -44,10 +44,6 @@ section.main {
     flex-direction: row-reverse; }
     .thumb-row:nth-child(even) .polaroid {
       transform: rotate(2deg); }
-  .thumb-row img {
-    width: 300px;
-    height: 80%;
-    border: 1px solid #333333; }
   .thumb-row .row-content {
     padding: 3em;
     font-size: 1.2em; }
@@ -66,8 +62,38 @@ section.main {
   -webkit-box-shadow: inset 0px 0px 32px 2px #c9c5ab;
   -moz-box-shadow: inset 0px 0px 32px 2px #c9c5ab;
   box-shadow: inset 0px 0px 32px 2px #c9c5ab; }
+  .polaroid img {
+    width: 300px;
+    height: 80%;
+    border: 1px solid #333333; }
   .polaroid figcaption {
     padding-top: 2em;
     padding-bottom: 1em;
     font-family: "IM Fell DW Pica SC", serif;
     font-size: 1.5em; }
+
+@media screen and (max-width: 1024px) {
+  section.hero {
+    height: 400px; }
+    section.hero h1 {
+      font-size: 6em; }
+    section.hero .subtitle {
+      font-size: 2.5em; }
+    section.hero p {
+      font-size: 2em; }
+  .content {
+    margin: 0;
+    width: 100%; }
+  .thumb-row {
+    margin: 3em;
+    flex-wrap: wrap;
+    padding-top: 2.5em; }
+    .thumb-row .row-content {
+      padding: 2em; }
+    .thumb-row .polaroid {
+      margin-left: auto;
+      margin-right: auto; }
+      .thumb-row .polaroid figcaption {
+        font-size: 3em;
+        padding-top: .5em;
+        padding-bottom: 0; } }
