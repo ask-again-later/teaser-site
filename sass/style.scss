@@ -1,3 +1,27 @@
+// VARIABLES
+// colors
+$tea-green: #ceebd1;
+$moss-green: #b6dea9;
+$green: #5c7a6a;
+$ash-grey: #aebfaf;
+$silver: #a6ada7;
+$white: #ffffff;
+$black: #333333;
+
+// fonts
+$raleway: 'Raleway', sans-serif;
+$im-fell-dw: 'IM Fell DW Pica SC', serif;
+
+$body-font: $raleway;
+$title-font: $im-fell-dw;
+
+// BASE
 body {
-  color: red;
+  font-family: $body-font;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: $title-font;
+}
+
+// BLOCKS
