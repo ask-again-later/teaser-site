@@ -8,6 +8,8 @@ $silver: #a6ada7;
 $white: #ffffff;
 $black: #333333;
 
+$dirty-polaroid: #f0efe8;
+
 // fonts
 $raleway: 'Raleway', sans-serif;
 $im-fell-dw: 'IM Fell DW Pica SC', serif;
@@ -18,10 +20,99 @@ $title-font: $im-fell-dw;
 // BASE
 body {
   font-family: $body-font;
+  color: $black;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: $title-font;
 }
 
-// BLOCKS
+// PAGE
+
+// hero image
+section.hero {
+  height: 600px;
+  background-image: url("../imgs/dead-trees.jpg");
+  background-size: 100% auto;
+  background-position: 50% 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  h1 {
+    font-size: 4em;
+    text-shadow: 1px 1px 10px $green;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  p {
+    margin-bottom: .3em;
+    text-shadow: 1px 1px 10px $ash-grey;
+  }
+}
+
+// main content
+section.main {
+  background-color: $ash-grey;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 1000px;
+  margin-top: 3em;
+}
+
+.thumb-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 3em;
+  background-color: $silver;
+  padding: 1em;
+  box-shadow: 3px 3px 17px 1px rgba(0,0,0,0.16);
+
+  &:nth-child(even){
+    flex-direction: row-reverse;
+
+    .polaroid {
+      transform: rotate(2deg);
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 80%;
+    border: 1px solid $black;
+  }
+
+  p {
+    width: 600px;
+  }
+}
+
+.polaroid {
+  background-color: $dirty-polaroid;
+  box-shadow: 3px 3px 17px 1px rgba(0,0,0,0.16);
+  height: 100%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-1deg);
+  -webkit-box-shadow: inset 0px 0px 32px 2px rgba(201,197,171,1);
+-moz-box-shadow: inset 0px 0px 32px 2px rgba(201,197,171,1);
+box-shadow: inset 0px 0px 32px 2px rgba(201,197,171,1);
+
+  figcaption {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-family: $title-font;
+    font-size: 1.5em;
+  }
+}
