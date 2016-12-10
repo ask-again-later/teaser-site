@@ -91,8 +91,13 @@ section.main {
     border: 1px solid $black;
   }
 
-  p {
-    width: 600px;
+  .row-content {
+    padding: 3em;
+    font-size: 1.2em;
+
+    p:not(:last-child){
+      margin-bottom: 1em;
+    }
   }
 }
 

@@ -48,8 +48,11 @@ section.main {
     width: 300px;
     height: 80%;
     border: 1px solid #333333; }
-  .thumb-row p {
-    width: 600px; }
+  .thumb-row .row-content {
+    padding: 3em;
+    font-size: 1.2em; }
+    .thumb-row .row-content p:not(:last-child) {
+      margin-bottom: 1em; }
 
 .polaroid {
   background-color: #f0efe8;
