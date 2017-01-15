@@ -5,6 +5,10 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: "IM Fell DW Pica SC", serif; }
 
+a {
+  color: #5c7a6a;
+  text-shadow: 1px 1px 3px #a6ada7; }
+
 section.hero {
   height: 600px;
   background-image: url("../imgs/dead-trees.jpg");
@@ -22,6 +26,23 @@ section.hero {
   section.hero p {
     margin-bottom: .3em;
     text-shadow: 1px 1px 10px #aebfaf; }
+
+form {
+  display: flex;
+  margin-top: 1em; }
+  form input {
+    font-size: 16px;
+    padding: .5em;
+    border-radius: 5px;
+    border: 0; }
+    form input[type="text"] {
+      width: 300px;
+      flex-shrink: 1; }
+    form input[type="submit"] {
+      border: 0;
+      background-color: #b6dea9;
+      color: #333333;
+      margin-left: 1em; }
 
 section.main {
   background-color: #aebfaf;
@@ -47,6 +68,11 @@ section.main {
   .thumb-row .row-content {
     padding: 3em;
     font-size: 1.2em; }
+    .thumb-row .row-content ul {
+      margin-bottom: 1em; }
+    .thumb-row .row-content li {
+      list-style: disc;
+      margin-left: 1.5em; }
     .thumb-row .row-content p:not(:last-child) {
       margin-bottom: 1em; }
 
@@ -72,15 +98,38 @@ section.main {
     font-family: "IM Fell DW Pica SC", serif;
     font-size: 1.5em; }
 
+.footer {
+  background-color: #aebfaf;
+  text-align: center;
+  padding: 2em 0; }
+
 @media screen and (max-width: 1024px) {
   section.hero {
-    height: 400px; }
+    height: 600px; }
     section.hero h1 {
       font-size: 6em; }
     section.hero .subtitle {
-      font-size: 2.5em; }
+      font-size: 3.5em; }
     section.hero p {
-      font-size: 2em; }
+      font-size: 3em; }
+    section.hero input {
+      font-size: 3em; }
+    section.hero input[type="submit"] {
+      margin-top: .5em; }
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    form input {
+      font-size: 42px; }
+      form input[type="text"] {
+        width: 100%; }
+      form input[type="submit"] {
+        margin-top: .5em;
+        width: 90%;
+        margin: 0; }
   .content {
     margin: 0;
     width: 100%; }

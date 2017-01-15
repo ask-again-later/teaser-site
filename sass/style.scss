@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5 {
   font-family: $title-font;
 }
 
+a {
+  color: $green;
+  text-shadow: 1px 1px 3px $silver;
+}
+
 // PAGE
 
 // hero image
@@ -53,6 +58,31 @@ section.hero {
   p {
     margin-bottom: .3em;
     text-shadow: 1px 1px 10px $ash-grey;
+  }
+}
+
+// newsletter forms
+form {
+  display: flex;
+  margin-top: 1em;
+
+  input {
+    font-size: 16px;
+    padding: .5em;
+    border-radius: 5px;
+    border: 0;
+
+    &[type="text"] {
+      width: 300px;
+      flex-shrink: 1;
+    }
+
+    &[type="submit"] {
+      border: 0;
+      background-color: $moss-green;
+      color: $black;
+      margin-left: 1em;
+    }
   }
 }
 
@@ -89,6 +119,15 @@ section.main {
     padding: 3em;
     font-size: 1.2em;
 
+    ul {
+      margin-bottom: 1em;
+    }
+
+    li {
+      list-style: disc;
+      margin-left: 1.5em;
+    }
+
     p:not(:last-child){
       margin-bottom: 1em;
     }
@@ -122,22 +161,58 @@ box-shadow: inset 0px 0px 32px 2px rgba(201,197,171,1);
   }
 }
 
+// footer
+.footer {
+  background-color: $ash-grey;
+  text-align: center;
+  padding: 2em 0;
+}
+
 // mobile
 
 @media screen and (max-width: 1024px) {
   section.hero {
-    height: 400px;
+    height: 600px;
 
     h1 {
       font-size: 6em;
     }
 
     .subtitle {
-      font-size: 2.5em;
+      font-size: 3.5em;
     }
 
     p {
-      font-size: 2em;
+      font-size: 3em;
+    }
+
+    input {
+      font-size: 3em;
+    }
+
+    input[type="submit"] {
+      margin-top: .5em;
+    }
+  }
+
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;  justify-content: center;
+    align-items: center;
+
+    input {
+      font-size: 42px;
+
+      &[type="text"] {
+        width: 100%;
+      }
+
+      &[type="submit"] {
+        margin-top: .5em;
+        width: 90%;
+        margin: 0;
+      }
     }
   }
 
