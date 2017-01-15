@@ -5,6 +5,10 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: "IM Fell DW Pica SC", serif; }
 
+a {
+  color: #5c7a6a;
+  text-shadow: 1px 1px 3px #a6ada7; }
+
 section.hero {
   height: 600px;
   background-image: url("../imgs/dead-trees.jpg");
@@ -93,6 +97,11 @@ section.main {
     padding-bottom: 1em;
     font-family: "IM Fell DW Pica SC", serif;
     font-size: 1.5em; }
+
+.footer {
+  background-color: #aebfaf;
+  text-align: center;
+  padding: 2em 0; }
 
 @media screen and (max-width: 1024px) {
   section.hero {
